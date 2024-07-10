@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글자색 바꾸기</title>
+    <style>
+        .red{
+            color: red;
+            background-color: aqua;
+        }
+        .blue{
+            background-color: blue;
+            color: gold;
+        }
+        .yellow{
+            color: yellow;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">정찬영</h1>
+    <p class="bgText">반갑습니다 바탕색을 바꿔주세요</p>
+    <p id="text">이름을 클릭해 보세요.</p>
+    <script>
+        // 1. 이름을 담는다.
+    let heading = document.querySelector("#heading")
+    // addEvent ~ 어떤 효과를 내기 위한 것
+    // heading.addEventListener("click",function(){
+    let bgText = document.querySelector(".bgText")   
+    let text = document.querySelector("#text")
+    // // })
+    // // onclick 했을 때 function 해라 , 위 아래 동일한 기능을 한다.
+    // heading.onclick = function(){
+    //     // heading.style.color = "red"
+    //     // if(조건 === 3개가 같으면 "red가"){~} else{~해라}
+    //     if(heading.style.color === "red"){
+    //         heading.style.color = "#333"
+    //     }
+    //     else{
+    //         heading.style.color ="red"
+    //     }
+    // }
+    // bgText.onclick = function(){
+    //     // bgText.style.backgroundColor = "blue"
+    //     if(bgText.style.backgroundColor === "blue"){
+    //         bgText.style.backgroundColor = "#fff"
+    //     }
+    //     else{
+    //         bgText.style.backgroundColor = "blue"
+    //     }
+    // }
+    // 바탕색을 토글 toggle()메서드
+    heading.onclick = function(){
+        heading.classList.toggle("red")
+    }
+    bgText.onclick = function(){
+        bgText.classList.toggle("blue")
+    }
+    text.onclick = function(){
+        text.classList.toggle("yellow")
+    }
+    </script>
+</body>
+</html>
