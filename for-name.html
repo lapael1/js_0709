@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for name</title>
+</head>
+<body>
+    <script>
+    let name = ["우동" , "소바", "라멘", "쫄면", "쌀국수", "냉면", "비빔면"]
+    console.log(name);
+    let allName = ""
+    for(let i = 0 ; i < name.length ; i++){
+    // console.log(i);
+    allName += name[i]
+    if(i < name.length - 1){
+        console.log(i);
+        allName += " , "
+    }
+    }
+    document.write(`면의 이름은 : ${allName}`)
+    </script>
+    
+</body>
+</html>
